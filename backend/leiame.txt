@@ -1,0 +1,39 @@
+backend
+  npm init -y
+  npm i -s express
+  npm i -D nodemon
+
+  npm i -s knex
+  npm i -s sqlite3
+  npx knex init
+
+  npx knex migrate:make create_ongs
+  npx knex migrate:latest
+ 
+  npm start
+
+  npm i -s cors
+  
+  -- Trabalhar com as rotas
+  -https://insomnia.rest/download/
+
+  --Tipos de parâmetros
+
+  - Query         -> parâmetros nomeados enviados na rota após o símbolo de ? e separados por &
+    Exemplo: http://127.0.0.1:3333/users?name=lerry
+    Obter:   const params = request.query;
+
+  - Routes        -> parâmetros utilizados para identificar recursos vem após a última /
+    Exemplo: http://127.0.0.1:3333/users/:id
+    Obter:   const params = request.params;
+
+  - Request Body  -> corpo da requisição, utilizado para criar ou alterar recursos
+    Enviado no post como formato json
+    Obter:   const body = request.body;
+
+  -- Métodos http:
+  - get     buscar  informação
+  - post    inserir informação
+  - put     alterar informação
+  - delete  excluir informação
+
