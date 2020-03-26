@@ -2,3 +2,6 @@ fronteend
   npx create-react-app frontend
   cd frontend
   npm start
+  npm i -s react-icons
+  npm i -s react-router-dom
+  npm i -s axios
